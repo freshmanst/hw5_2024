@@ -1,0 +1,183 @@
+@keyframes growLogo {
+    from {
+    width: 25px;
+    opacity: 0;
+    }
+    to {
+    width: 475px;
+    opacity: 1;
+    }
+}
+
+#logo {
+    animation: growLogo 5s;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    background: url('../images/concrete_seamless.png');
+    background-repeat: repeat;
+    background-color: #f1f1f1;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_links a {
+    color: #1e767e; 
+    text-decoration: none;
+}
+
+.nav_links a:visited {
+    color: #1e767e; 
+}
+
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.card {
+    flex-basis: 450px;
+    background: #ffffff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+
+@media (min-width: 900px) {
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        
+    }
+    
+    .nav_links {
+        flex-direction: row;
+    }
+    
+    .card {
+        flex-basis: 275px;
+    }
+
+    .pricing {
+        align-items: center;
+    }
+
+    body > header{
+        position: sticky;
+        top: 0;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+    animation: none;
+    }
+}
+
+
+@media print {
+    body {
+        font-family: Arial, Helvetica;
+        background: #f1f1f1;
+        height: 100%; 
+        
+
+    }
+    
+    header {
+        background: none;
+        width: 100%;
+    }
+
+    .pricing, .card, .nav_links a {
+        background: none;
+    }
+
+    nav {
+        width: 100%;
+
+    }
+
+    .nav_links {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between; 
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_links a {
+        text-decoration: none; 
+        color: #000;
+    }
+
+
+    .pricing {
+        display: flex;
+        align-items: stretch; 
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex-basis: 325px; 
+        border: 2px solid #45ADDD;
+        box-sizing: border-box;
+        
+    }
+
+
+    .gallery, .gallery img, #gallery {
+        display: none;
+    }
+
+    .card ul li:nth-of-type(2)::after {
+        content: "\1F44D"; 
+    }
+
+    footer {
+        break-before: page;
+    }
+
+}
+
+  
+
+
+
